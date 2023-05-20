@@ -3,6 +3,7 @@
     "version": "0.1.4",
     "description": "Flashstorage access (get/put)",
     "license": "MIT",
+    "icon": "file:../icon.png",
     "dependencies": {
         "core": "*"
     },
