@@ -1,6 +1,6 @@
 {
     "name": "Flashstorage",
-    "version": "0.0.3",
+    "version": "0.0.2",
     "description": "Flashstorage access (get/put)",
     "license": "MIT",
     "dependencies": {
