@@ -11,7 +11,8 @@ namespace flashstorage {
     //% shim=flashstorage::size
     export function size() : number {
         if (!simMap) simMap = {};
-        return simMap.size;
+        let x : number = simMap.size;
+        return x;
     }
 
     //% blockId="flash_remove_key" block="remove %key pair"
