@@ -5,7 +5,7 @@
 //% block="Flash Storage"
 namespace flashstorage {
 
-    let simMap = {};
+    let simMap : any = null
 
     //% blockId="flash_pairs_stored" block="number of pairs stored in flash"
     //% shim=flashstorage::size
