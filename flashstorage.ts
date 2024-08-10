@@ -5,12 +5,15 @@
 //% block="Flash Storage"
 namespace flashstorage {
 
-    let simMap = {};
+    let simMap : any = null;
 
     //% blockId="flash_pairs_stored" block="number of pairs stored in flash"
     //% shim=flashstorage::size
     export function size() : number {
-        return simMap ? simMap.length : 0;
+        if(simMap){
+            return simMap.size;
+        }
+        return 0;
     }
 
     //% blockId="flash_remove_key" block="remove %key pair"
@@ -29,7 +32,11 @@ namespace flashstorage {
     //% blockId="flash_put_value" block="save %key : %value pair"
     //% shim=flashstorage::put
     export function put(key: string, value: string) : number {
-        if (!simMap) simMap = {};
+        if (!simMap) {
+            simMap = {};
+            simMap[key] = value;
+            return 1;
+        }
         simMap[key] = value;
         return 0;
     }
