@@ -28,8 +28,9 @@ namespace flashstorage {
 
     //% blockId="flash_put_value" block="save %key : %value pair"
     //% shim=flashstorage::put
-    export function put(key: string, value: string) {
+    export function put(key: string, value: string) : number {
         if (!simMap) simMap = {};
         simMap[key] = value;
+        return 0;
     }
 }
