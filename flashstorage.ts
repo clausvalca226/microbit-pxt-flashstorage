@@ -6,8 +6,8 @@
 namespace flashstorage {
 
     //let simMap : any = new Map();
-    var simMapKeys : string[] = [];
-    var simMapValues : string[] = [];
+    let simMapKeys : string[] = [];
+    let simMapValues : string[] = [];
     
 
     //% blockId="flash_pairs_stored" block="number of pairs stored in flash"
