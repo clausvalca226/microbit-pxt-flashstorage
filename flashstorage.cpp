@@ -45,12 +45,12 @@ namespace flashstorage {
     }
 
     //% 
-    void put(String key, String value) {
-        if(!key) return;
+    int put(String key, String value) {
+        if(!key) return -1;
         if(!value) {
             remove(key);
-            return;
+            return -2;
         }
-        uBit.storage.put(key->getUTF8Data(), (uint8_t*)value->getUTF8Data(), value->getUTF8Size());
+        return uBit.storage.put(key->getUTF8Data(), (uint8_t*)value->getUTF8Data(), value->getUTF8Size());
     }
 }
