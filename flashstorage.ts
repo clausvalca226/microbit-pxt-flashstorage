@@ -10,10 +10,11 @@ namespace flashstorage {
     //% blockId="flash_pairs_stored" block="number of pairs stored in flash"
     //% shim=flashstorage::size
     export function size() : number {
+        let x = 0;
         if(simMap){
-            return simMap.size;
+            x = simMap.size;
         }
-        return 0;
+        return x;
     }
 
     //% blockId="flash_remove_key" block="remove %key pair"
